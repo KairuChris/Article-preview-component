@@ -1,0 +1,16 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+    h1,h2,h3,h4,h5,p{
+      margin: 0;
+    }
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+a,a:visited{
+    text-decoration: none;
+}

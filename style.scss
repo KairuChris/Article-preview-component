@@ -1,0 +1,321 @@
+@forward 'globals';
+@import 'globals/colors';;
+
+//mobile
+body{
+
+    background-color: $LightGrayishBlue;
+
+    .attribution{
+        text-align: center;
+        color: $VeryDarkGrayishBlue;
+        a{
+            color: $GrayishBlue;
+        }
+    }
+    .card-desktop{
+        display: none;
+    }
+
+    .card{
+       
+        width: 330px;
+        margin: 100px auto;
+      
+        .img-container{
+            width: 330px;
+            height: 200px;
+            background-image: url('images/drawers.jpg');
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius:10px ;
+        }
+        .text-container{
+            background-color: white;
+            padding: 40px 35px 20px 35px;
+            h4{
+                color: $VeryDarkGrayishBlue;
+                padding-bottom: 15px;
+                line-height: 25px;
+               
+            }
+            p{
+                font-size: 13px;
+                line-height: 20px;
+              
+                width: 99%;
+                color: $DesaturatedDarkBlue;
+            }
+        }
+        .profile-section{
+            background-color: white;
+            padding: 0px 20px 20px 20px;
+            display: flex;
+            justify-content: space-around;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            z-index: 1;
+            .avatar{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-left: -12px;
+              
+            }
+            #share1{
+                height: 30px;
+                width: 30px;
+                background-color: $LightGrayishBlue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                margin-right: -10px;
+                cursor: pointer;
+              
+            }
+            p{
+                font-size: 13px;
+                color: $VeryDarkGrayishBlue;
+                margin-left: -40px;
+                font-weight: 700;
+                #date{
+                    color: $GrayishBlue;
+                    font-size: 12px;
+                }
+            }
+        }
+        .socmed-section{
+            background-color: $VeryDarkGrayishBlue;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0px;
+            align-items: center;
+            width: 330px;
+            height: 0px;
+            position: absolute;
+            top: 550px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            opacity: 0;
+            z-index: -1;
+            transition: .5s;
+
+            p{
+                color: $GrayishBlue;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 4px;
+                margin-left: 15px;
+                opacity: 0;
+            }
+            .icons-container{
+                margin-left: -10px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                opacity: 0;
+
+                img{
+                    height: 18px;
+                    margin-right: 15px;
+                }
+            }
+            #share2{
+                background-color: $DesaturatedDarkBlue;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                margin-right: 20px;
+                cursor: pointer;
+                opacity: 0;
+            }
+            &.dropdown{
+                opacity: 1;
+                z-index: 2;
+                height: 60px;
+            }
+            &.dropdown p{
+                opacity: 1;
+            }
+            &.dropdown .icons-container{
+                opacity: 1;
+            }
+            &.dropdown #share2{
+                opacity: 1;
+            }
+        }
+    }
+}
+//desktop
+@media (min-width:900px){
+    body{
+       .card{
+        display: none;
+       }
+
+       .card-desktop{
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    
+        .img-desktop{
+            background-image: url('images/drawers.jpg');
+            background-size: cover;
+            width: 250px;
+            height: 250px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            box-shadow: 0px 10px 25px hsl(212, 23%, 69%,.3);
+           
+        }
+        .text-container-desktop{
+            background-color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 30px 35px 20px 35px;
+            width: 405px;
+            height: 250px;
+            position: relative;
+            box-shadow: 0px 10px 25px hsl(212, 23%, 69%,.3);
+
+            h3{
+                color: $VeryDarkGrayishBlue;
+                padding-bottom: 10px;
+                line-height: 25px;
+            }
+            p{
+                font-size: 12px;
+                line-height: 20px;
+                width: 99%;
+                color: $DesaturatedDarkBlue;
+            }
+
+            .profile-desktop{
+                padding-top: 12px;
+                display: flex;
+                justify-content: space-around;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+           
+                .avatar{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                  
+                }
+                #share1-desktop{
+                    height: 29px;
+                    width: 37px;
+                    background-color: $LightGrayishBlue;
+                    fill: $DesaturatedDarkBlue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    margin-top: 5px;
+                    margin-left: -15px;
+                    cursor: pointer;
+
+                    &:active{
+                        fill: white;
+                        background-color: $VeryDarkGrayishBlue;
+                    }
+                    &:hover{
+                        fill: white;
+                        background-color: $VeryDarkGrayishBlue;
+                    }
+                }
+                p{
+                    font-size: 13px;
+                    color: $VeryDarkGrayishBlue;
+                    margin-left: 20px;
+                    #date{
+                        color: $GrayishBlue;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .socmed-section-desktop{
+                background-color: $VeryDarkGrayishBlue;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 13px 37px;
+                height: 0px;
+                width: 220px;
+                position: absolute;
+                top: 120px;
+                left: 245px;
+                transition: .5s;
+                opacity: 0;
+    
+                p{
+                    color: $GrayishBlue;
+                    font-size: 11px;
+                    font-weight: 500;
+                    letter-spacing: 4px;
+                    margin-right: 15px;
+                    margin-left: -7px;
+                    opacity: 0;
+                }
+
+                .icons-container{
+                    display: flex;
+                    align-items: center;
+                    margin-right: -8px;
+                    cursor: pointer;
+                    opacity: 0;
+
+                    img{
+                        height: 18px;
+                        transition: .2s;
+
+                        &:hover{
+                            transform: scale(1.4);
+                        }
+
+                        &:not(:last-child){
+                            margin-right: 15px;
+                        }
+                    }
+                }
+                //for the triangle shape
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    width: 0px;
+                    height: 0px;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-top: 12px solid $VeryDarkGrayishBlue;
+                }
+                &.active{
+                    height: 50px;
+                    opacity: 1;
+                }
+                &.active p{
+                    opacity: 1;
+                }
+                &.active .icons-container{
+                    opacity: 1;
+                }
+                
+            }
+        }
+      
+     
+       }
+    }
+   
+}

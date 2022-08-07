@@ -1,0 +1,305 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+body h1, body h2, body h3, body h4, body h5, body p {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+body {
+  background-color: hsl(210deg, 46%, 95%);
+}
+body .attribution {
+  text-align: center;
+  color: hsl(217deg, 19%, 35%);
+}
+body .attribution a {
+  color: hsl(212deg, 23%, 69%);
+}
+body .card-desktop {
+  display: none;
+}
+body .card {
+  width: 330px;
+  margin: 100px auto;
+}
+body .card .img-container {
+  width: 330px;
+  height: 200px;
+  background-image: url("images/drawers.jpg");
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+body .card .text-container {
+  background-color: white;
+  padding: 40px 35px 20px 35px;
+}
+body .card .text-container h4 {
+  color: hsl(217deg, 19%, 35%);
+  padding-bottom: 15px;
+  line-height: 25px;
+}
+body .card .text-container p {
+  font-size: 13px;
+  line-height: 20px;
+  width: 99%;
+  color: hsl(214deg, 17%, 51%);
+}
+body .card .profile-section {
+  background-color: white;
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1;
+}
+body .card .profile-section .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: -12px;
+}
+body .card .profile-section #share1 {
+  height: 30px;
+  width: 30px;
+  background-color: hsl(210deg, 46%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: -10px;
+  cursor: pointer;
+}
+body .card .profile-section p {
+  font-size: 13px;
+  color: hsl(217deg, 19%, 35%);
+  margin-left: -40px;
+  font-weight: 700;
+}
+body .card .profile-section p #date {
+  color: hsl(212deg, 23%, 69%);
+  font-size: 12px;
+}
+body .card .socmed-section {
+  background-color: hsl(217deg, 19%, 35%);
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0px;
+  align-items: center;
+  width: 330px;
+  height: 0px;
+  position: absolute;
+  top: 550px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+body .card .socmed-section p {
+  color: hsl(212deg, 23%, 69%);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-left: 15px;
+  opacity: 0;
+}
+body .card .socmed-section .icons-container {
+  margin-left: -10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+}
+body .card .socmed-section .icons-container img {
+  height: 18px;
+  margin-right: 15px;
+}
+body .card .socmed-section #share2 {
+  background-color: hsl(214deg, 17%, 51%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+body .card .socmed-section.dropdown {
+  opacity: 1;
+  z-index: 2;
+  height: 60px;
+}
+body .card .socmed-section.dropdown p {
+  opacity: 1;
+}
+body .card .socmed-section.dropdown .icons-container {
+  opacity: 1;
+}
+body .card .socmed-section.dropdown #share2 {
+  opacity: 1;
+}
+
+@media (min-width: 900px) {
+  body .card {
+    display: none;
+  }
+  body .card-desktop {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+  body .card-desktop .img-desktop {
+    background-image: url("images/drawers.jpg");
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 10px 25px hsla(212deg, 23%, 69%, 0.3);
+  }
+  body .card-desktop .text-container-desktop {
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 30px 35px 20px 35px;
+    width: 405px;
+    height: 250px;
+    position: relative;
+    box-shadow: 0px 10px 25px hsla(212deg, 23%, 69%, 0.3);
+  }
+  body .card-desktop .text-container-desktop h3 {
+    color: hsl(217deg, 19%, 35%);
+    padding-bottom: 10px;
+    line-height: 25px;
+  }
+  body .card-desktop .text-container-desktop p {
+    font-size: 12px;
+    line-height: 20px;
+    width: 99%;
+    color: hsl(214deg, 17%, 51%);
+  }
+  body .card-desktop .text-container-desktop .profile-desktop {
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  body .card-desktop .text-container-desktop .profile-desktop .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  body .card-desktop .text-container-desktop .profile-desktop #share1-desktop {
+    height: 29px;
+    width: 37px;
+    background-color: hsl(210deg, 46%, 95%);
+    fill: hsl(214deg, 17%, 51%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: -15px;
+    cursor: pointer;
+  }
+  body .card-desktop .text-container-desktop .profile-desktop #share1-desktop:active {
+    fill: white;
+    background-color: hsl(217deg, 19%, 35%);
+  }
+  body .card-desktop .text-container-desktop .profile-desktop #share1-desktop:hover {
+    fill: white;
+    background-color: hsl(217deg, 19%, 35%);
+  }
+  body .card-desktop .text-container-desktop .profile-desktop p {
+    font-size: 13px;
+    color: hsl(217deg, 19%, 35%);
+    margin-left: 20px;
+  }
+  body .card-desktop .text-container-desktop .profile-desktop p #date {
+    color: hsl(212deg, 23%, 69%);
+    font-size: 12px;
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop {
+    background-color: hsl(217deg, 19%, 35%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 37px;
+    height: 0px;
+    width: 220px;
+    position: absolute;
+    top: 120px;
+    left: 245px;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop p {
+    color: hsl(212deg, 23%, 69%);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-right: 15px;
+    margin-left: -7px;
+    opacity: 0;
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop .icons-container {
+    display: flex;
+    align-items: center;
+    margin-right: -8px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop .icons-container img {
+    height: 18px;
+    transition: 0.2s;
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop .icons-container img:hover {
+    transform: scale(1.4);
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop .icons-container img:not(:last-child) {
+    margin-right: 15px;
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0px;
+    height: 0px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid hsl(217deg, 19%, 35%);
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop.active {
+    height: 50px;
+    opacity: 1;
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop.active p {
+    opacity: 1;
+  }
+  body .card-desktop .text-container-desktop .socmed-section-desktop.active .icons-container {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
